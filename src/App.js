@@ -9,6 +9,7 @@ import lottie from "lottie-web"
 const ratio = 1920 / 900
 function App() {
   const [scale, setscale] = useState(window.innerWidth * 0.65 / 1000);
+  const [scaleY, setscaleY] = useState(window.innerHeight / 900);
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -21,7 +22,9 @@ function App() {
 
   const onResize = () => {
     const scale = (window.innerWidth * 0.65 / 1000)
+    const scaley = window.innerHeight / 900
     setscale(scale)
+    setscaleY(scaley)
   }
 
   useEffect(() => {
@@ -45,7 +48,7 @@ function App() {
         transformOrigin: "210px 900px",
         left: "-210px",
         bottom: "0px",
-        transform: `scale(${scale})`
+        transform: `scaleX(${scale}) scaleY(${scaleY})`
       }}>
 
         {/* background */}
@@ -58,6 +61,8 @@ function App() {
       <div ref={containerRef}
         style={{ width: "20%", position: "absolute", bottom: "0%" }}
       >.</div>
+
+
       {/* my imple */}
 
       {/* <div className="parent">
