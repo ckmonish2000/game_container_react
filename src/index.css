@@ -1,13 +1,83 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  /* position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.parent{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  /* background-image: url(./intro.svg) ;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center; */
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0px, 0px, 0px);
+  transform: scale(1.5);
+}
+
+.pz{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#h{
+  position: absolute;
+  bottom: 27%;
+  left: 45%;
+  /* border: 1px solid; */
+  /* background: white; */
+  width: 10%;
+  height:10%
+}
+
+
+
+
+.vendorWrapper{
+  position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.playHold{
+  position: absolute;
+}
+
+
+.background{
+  position: absolute;
+    width: 1920px;
+    height: 900px;
+    object-fit: cover;
+}
+
+
+.vendorWrapper .playButton{
+  position: absolute;
+    top: 598px;
+    left: 880px;
+    width: 183px;
+    height: 183px;
+    cursor: pointer;
 }
